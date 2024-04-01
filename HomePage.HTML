@@ -223,7 +223,7 @@
                     </div>
                     <div class="starContainer">
                         <div class="star-widget">
-                            <input type="radio" name="rate" id="rate-5">
+                            <input type="radio" name="rate" id="rate-5" required>
                             <label for="rate-5" class="fas fa-star"></label>
                             <input type="radio" name="rate" id="rate-4">
                             <label for="rate-4" class="fas fa-star"></label>
@@ -239,7 +239,7 @@
                     <label for="FeedbackName" class="label">Name :</label>
                     <input type="text" placeholder="(Optional)" class="inputName">
                     <label for="FeedbackContent" class="label">Comments :</label>
-                    <textarea type="text" placeholder="Tell us about your experience..." class="inputComment" maxlength="500" oninput="countCharacters(this)"></textarea>
+                    <textarea type="text" placeholder="Tell us about your experience..." class="inputComment" maxlength="500" oninput="countCharacters(this)" required></textarea>
                     <div class="characterCount" style="display: flex; justify-content: flex-end;">
                         <p><span id="characterCount"></span>/500</p>
                     </div>
