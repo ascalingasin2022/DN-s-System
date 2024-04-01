@@ -1,0 +1,169 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat";
+}
+::-webkit-scrollbar {
+    width: 10px; /* width of the entire scrollbar */
+}
+::-webkit-scrollbar-track {
+    background: none; /* color of the tracking area */
+}
+::-webkit-scrollbar-thumb {
+    background: #888; /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* color of the scroll thumb on hover */
+}
+
+/* ===================Header=================== */
+.header {
+    display: flex; 
+    padding: 26px 160px;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+.header ul {
+    text-decoration: none;
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    justify-content: space-around;
+}
+.header li{
+    padding: 0 10px;
+    position: relative;
+}
+.header li a{
+    text-decoration: none;
+    color: #3F3F3F;
+}
+.header li:after{
+    content: " ";
+    position: absolute;
+    background-color: #FCC201;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition:  0.3s;
+}
+.header li:hover{
+    color:#FCC201;
+    transition:  0.3s;
+}
+.header li:hover:after{
+    width: 100%;
+}
+.header button{
+    height: 37px;
+    width: 123px;
+    padding: 6px 10px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FCC201;
+    border: 3px solid #FCC201;
+}
+.header button:hover{
+    background-color: #FCC201;
+    color: #3F3F3F;
+    transition:  0.3s;
+}
+.logo img {
+    width: 56px; 
+    height: 56px;
+    
+}
+/* ===================End of Header=================== */
+
+/* ===================Login Box=================== */
+.login_box {
+    margin: 0 160px;
+}
+.login_box .login_container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 60px;
+    justify-content: space-between;
+}
+.login_box .login_container .picture{
+    height:560px;
+    width: 550px;
+}
+.login_box .login_container .picture img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.login_box .login_container .login_form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 380px;
+    padding-right: 96px;
+}
+.login_box .login_container .login_form h1{
+    font-size: 24px;
+    font-weight: bold;
+    color: #B78628;
+    margin-bottom: 30px;;
+}
+.login_box .login_container .login_form .form_container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 12px;
+    color: #3F3F3F;
+    gap: 5px;
+}
+.login_box .login_container .login_form .form_container .input{
+    padding: 6px;
+}
+.login_box .login_container .login_form .form_container .label{
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 10px;
+}
+.login_box .login_container .login_form .form_container .encrypt{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 5px;
+}
+.login_box .login_container .login_form .form_container .button{
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    color: #FCC201;
+    background-color: #3F3F3F;
+    border: 0;
+    cursor: pointer;
+    padding: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+}
+.login_box .login_container .login_form .form_container .button:hover{
+    color: #FCC201;
+    background-color: #7A591B;
+    transition: 0.3s;
+}
+.login_box .login_container .login_form .form_container .text{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+}
+/* ===================End of Login Box=================== */
