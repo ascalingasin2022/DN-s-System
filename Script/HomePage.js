@@ -63,7 +63,7 @@ submitButton.onclick = () =>{
         SendFeedback_Content.style.display = "none";
         SendFeedback_header.style.display = "none";
         SubmitConfirmation.style.display = "block";
-        return true;
+        return false;
     }
 
 }
