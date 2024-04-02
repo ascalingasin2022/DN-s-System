@@ -45,7 +45,7 @@ function showSignUpForm() {
 				class="input" 
 				type="password"
 				pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-				title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+				title="Must contain at least one number, one uppercase, one lowercase letter, and at least 8 or more characters"
 				required>
 			<div class="encrypt">
 				<input type="checkbox" onclick="myFunction()">
@@ -58,7 +58,7 @@ function showSignUpForm() {
 				class="input" 
 				type="password"
 				pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-				title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+				title="Must contain at least one number, one uppercase, one lowercase letter, and at least 8 or more characters"
 				required>
 			<div class="encrypt">
 				<input type="checkbox" onclick="myFunction2()">
