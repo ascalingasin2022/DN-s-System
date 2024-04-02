@@ -23,7 +23,7 @@ var originalLoginForm = loginform.innerHTML;
 function showSignUpForm() {
 	var signUpForm = `
 		<h1>Sign Up</h1>
-		<form class="form_container">
+		<form class="form_container" onsubmit="return validatePassword(event)">
 			<label for="name" class="label">Name</label>
 			<input 
 				placeholder="Enter your name"
@@ -75,4 +75,18 @@ function showSignUpForm() {
 
 function showLoginForm() {
 	document.querySelector('.login_form').innerHTML = originalLoginForm;
+}
+
+function validatePassword(event) {
+    event.preventDefault(); // Prevent form submission
+    
+    var password = document.getElementById("userInput").value;
+    var repassword = document.getElementById("repassword").value;
+    
+    if (password !== repassword) {
+        alert("Passwords do not match. Please try again.");
+        return false;
+    }
+    
+    return true;
 }
