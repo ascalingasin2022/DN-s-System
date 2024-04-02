@@ -19,6 +19,8 @@ function myFunction2() {
 // sign up form on click function
 var loginform = document.getElementById("login_form");
 var originalLoginForm = loginform.innerHTML;
+var headTitle = document.getElementById("headTitle");
+var originalheadTitle = headTitle.innerHTML;
 
 function showSignUpForm() {
 	var signUpForm = `
@@ -70,11 +72,14 @@ function showSignUpForm() {
 			</div>
 		</form>
 	`;
+	var signUpTitle = `Sign Up`;
 	document.querySelector('.login_form').innerHTML = signUpForm;
+	document.querySelector('.headTitle').innerHTML = signUpTitle;
 }
 
 function showLoginForm() {
 	document.querySelector('.login_form').innerHTML = originalLoginForm;
+	document.querySelector('.headTitle').innerHTML = originalheadTitle;
 }
 
 function validatePassword(event) {
