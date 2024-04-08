@@ -43,11 +43,17 @@ function validatePassword(event) {
 var login_form = document.getElementById("login_form");
 var signUp_form = document.getElementById("signUp_form");
 
+var signUpTitle = `Sign Up`;
+var headTitle = document.getElementById("headTitle");
+var originalheadTitle = headTitle.innerHTML;
+
 function signUp() {
     login_form.style.top = "-430px";
     signUp_form.style.top = "-290px";
+	document.querySelector('.headTitle').innerHTML = signUpTitle;
 }
 function logIn() {
     login_form.style.top = "40px";
     signUp_form.style.top = "150px";
+	document.querySelector('.headTitle').innerHTML = originalheadTitle;
 }
