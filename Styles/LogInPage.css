@@ -87,40 +87,48 @@
 /* ===================End of Header=================== */
 
 /* ===================Login Box=================== */
-.login_box {
-    margin: 0 160px;
+.box {
+    padding: 0 160px 50px 160px;
 }
-.login_box .login_container{
+.box .container{
     display: flex;
     align-items: center;
     flex-direction: row;
     gap: 60px;
     justify-content: space-between;
 }
-.login_box .login_container .picture{
+.logIn_SignUp{
+    height: 446px;
+    width: auto;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+.box .container .picture{
     height:560px;
     width: 550px;
 }
-.login_box .login_container .picture img{
+.box .container .picture img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 20px;
 }
-.login_box .login_container .login_form{
+.Left_form_container, .Right_form_container{
     display: flex;
-    align-items: center;
     flex-direction: column;
     width: 380px;
-    padding-right: 96px;
+    transition:.5s
+    /* padding-right: 96px; */
 }
-.login_box .login_container .login_form h1{
+.login_form h1, .signUp_form h1{
     font-size: 24px;
     font-weight: bold;
     color: #B78628;
     margin-bottom: 30px;;
 }
-.login_box .login_container .login_form .form_container{
+.login_form, .signUp_form{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -128,21 +136,21 @@
     color: #3F3F3F;
     gap: 5px;
 }
-.login_box .login_container .login_form .form_container .input{
+.input{
     padding: 6px;
 }
-.login_box .login_container .login_form .form_container .label{
+.label{
     font-weight: bold;
     font-style: italic;
     margin-top: 10px;
 }
-.login_box .login_container .login_form .form_container .encrypt{
+.encrypt{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     gap: 5px;
 }
-.login_box .login_container .login_form .form_container .button{
+.button, .button1{
     width: 100%;
     font-size: 15px;
     font-weight: bold;
@@ -155,15 +163,24 @@
     margin-top: 10px;
     display: block;
 }
-.login_box .login_container .login_form .form_container .button:hover{
+.button:hover{
     color: #FCC201;
     background-color: #7A591B;
     transition: 0.3s;
 }
-.login_box .login_container .login_form .form_container .text{
+.text{
     margin-top: 10px;
     display: flex;
     justify-content: center;
     font-style: italic;
+}
+
+#login_form{
+    position: relative;
+    top:40px; /*-430px*/
+}
+#signUp_form{
+    position: relative;
+    top: 150px; /*-290px*/
 }
 /* ===================End of Login Box=================== */
