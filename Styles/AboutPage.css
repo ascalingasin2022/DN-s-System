@@ -254,14 +254,11 @@
     opacity: 1;
 }
 .button--previous {
-    left: 1.5rem;
+    left: -5rem;
     transform: rotate(180deg);
 }
 .button--next {
-    right: 1.5rem;
-}
-.categories .carousel .button .button--next{
-    right: 1.5rem;
+    right: -5rem;
 }
 .categories .carousel .list{
     display: flex;
