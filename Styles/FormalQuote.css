@@ -172,7 +172,7 @@
     border: 1px solid #3F3F3F;
     border-radius: 5px;
 }
-.formalQuote_container .formalQuote_form .button{
+.formalQuote_container .formalQuote_form .fq_button{
     width: 150px;
     font-size: 15px;
     font-weight: bold;
@@ -186,7 +186,7 @@
     display: block;
     margin-left: auto;
 }
-.formalQuote_container .formalQuote_form .button:hover{
+.formalQuote_container .formalQuote_form .fq_button:hover{
     color: #FCC201;
     background-color: #7A591B;
     transition: 0.3s;
