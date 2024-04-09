@@ -106,7 +106,7 @@
                 <div class="title">Customer’s Feedback</div>
                 <div class="subtitle">
                     <p class="UsersSayAboutUs"> WHAT OUR <span class="UsersSay">USERS SAY</span> ABOUT US </p>
-                    <a href="#CustomersFeedback_Overlay" class="SendFeedback">Send Feedback</a>
+                    <button class="SendFeedback" data-open-modal>Send Feedback</button>
                 </div>
             </div>
             <div class="carousel">
@@ -211,62 +211,53 @@
                             </div>
                         </div>
                     </li>
+                    
                 </ul>
                 <button onclick="handleClick1('previous')" class="button button--previous" type="button">➤</button>
                 <button onclick="handleClick1('next')" class="button button--next" type="button">➤</button>
             </div>
         </div>
 
-        <div class="SendFeedback_Overlay" id="CustomersFeedback_Overlay">
-            <div class="SendFeedback_wrapper">
-                <div class="SendFeedback_header">
-                    <div class="SendFeedback_Title">Send <span style="color: #B78628;">Feedback</span></div>
-                    <a href="#CustomersFeedback" class="close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 8 8">
-                            <path fill="#3F3F3F" d="M1.41 0L0 1.41l.72.72L2.5 3.94L.72 5.72L0 6.41l1.41 1.44l.72-.72l1.81-1.81l1.78 1.81l.69.72l1.44-1.44l-.72-.69l-1.81-1.78l1.81-1.81l.72-.72L6.41 0l-.69.72L3.94 2.5L2.13.72z" />
-                        </svg>
-                    </a>
-                </div>
-                <form class="SendFeedback_Content" onsubmit="return validateForm()">
-                    <div class="ratingTitle">
-                        <p>Rate Us</p>
-                    </div>
-                    <div class="starContainer">
-                        <div class="star-widget">
-                            <input type="radio" name="rate" id="rate-5" required>
-                            <label for="rate-5" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-4">
-                            <label for="rate-4" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-3">
-                            <label for="rate-3" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-2">
-                            <label for="rate-2" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-1">
-                            <label for="rate-1" class="fas fa-star"></label>
-                        </div>
-                    </div>
-
-                    <label for="FeedbackName" class="label">Name :</label>
-                    <input type="text" placeholder="(Optional)" class="inputName">
-                    <label for="FeedbackContent" class="label">Comments :</label>
-                    <textarea type="text" placeholder="Tell us about your experience..." class="inputComment" maxlength="500" oninput="countCharacters(this)" required></textarea>
-                    <div class="characterCount" style="display: flex; justify-content: flex-end;">
-                        <p><span id="characterCount"></span>/500</p>
-                    </div>
-                    <input type="submit" value="Submit" class="SubmitButton">
-                </form>
-
-                <div class="SubmitConfirmation">
-                    <a href="#CustomersFeedback" class="close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 8 8">
-                            <path fill="#3F3F3F" d="M1.41 0L0 1.41l.72.72L2.5 3.94L.72 5.72L0 6.41l1.41 1.44l.72-.72l1.81-1.81l1.78 1.81l.69.72l1.44-1.44l-.72-.69l-1.81-1.78l1.81-1.81l.72-.72L6.41 0l-.69.72L3.94 2.5L2.13.72z" />
-                        </svg>
-                    </a>
-                    <p>Thank you for your <span style="color: #B78628;">feedback!</span><br><i style="font-size: 12px;">It will now be validated. Reload the page to send your feedback again.</i></p>
-                </div>
+        
+        <dialog class="SendFeedback_wrapper" data-modal>
+            <div class="SendFeedback_header">
+                <div class="SendFeedback_Title">Send <span style="color: #B78628;">Feedback</span></div>
+                <button data-close-modal class="close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 8 8">
+                        <path fill="#3F3F3F" d="M1.41 0L0 1.41l.72.72L2.5 3.94L.72 5.72L0 6.41l1.41 1.44l.72-.72l1.81-1.81l1.78 1.81l.69.72l1.44-1.44l-.72-.69l-1.81-1.78l1.81-1.81l.72-.72L6.41 0l-.69.72L3.94 2.5L2.13.72z" />
+                    </svg>
+                </button>
             </div>
-        </div>
+            <form class="SendFeedback_Content" onsubmit="alert('Thank you for your feedback! Press OK to continue.');">
+                <div class="ratingTitle">
+                    <p>Rate Us</p>
+                </div>
+                <div class="starContainer">
+                    <div class="star-widget">
+                        <input type="radio" name="rate" id="rate-5" required>
+                        <label for="rate-5" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-4">
+                        <label for="rate-4" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-3">
+                        <label for="rate-3" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-2">
+                        <label for="rate-2" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-1">
+                        <label for="rate-1" class="fas fa-star"></label>
+                    </div>
+                </div>
 
+                <label for="FeedbackName" class="label">Name</label>
+                <input type="text" placeholder="(Optional)" class="inputName">
+                <label for="FeedbackContent" class="label">Comments</label>
+                <textarea type="text" placeholder="Tell us about your experience..." class="inputComment" maxlength="500" oninput="countCharacters(this)" required></textarea>
+                <div class="characterCount" style="display: flex; justify-content: flex-end;">
+                    <p><span id="characterCount"></span>/500</p>
+                </div>
+                <input type="submit" value="Submit" class="SubmitButton">
+            </form>
+        </dialog>
+        
         <footer>
             <div class="footer">
                 <div class="footerLogo">
@@ -309,8 +300,6 @@
                 </div>
             </div>
         </footer>
-
     </body>
-
     <script src="Script\HomePage.js"></script>
 </html>
