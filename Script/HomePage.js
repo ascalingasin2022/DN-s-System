@@ -33,37 +33,14 @@ function countCharacters(textarea) {
     counterElement.textContent = currentLength;
 }
 
-/* Form Validation */
-const submitButton = document.querySelector(".SubmitButton");
-const SendFeedback_Content = document.querySelector(".SendFeedback_Content");
-const SendFeedback_header = document.querySelector(".SendFeedback_header");
-const SubmitConfirmation = document.querySelector(".SubmitConfirmation");
+/* Send feedback dialog box*/
+const openButton = document.querySelector('[data-open-modal]');
+const closeButton = document.querySelector('[data-close-modal]');
+const modal = document.querySelector('[data-modal]');
 
-submitButton.onclick = () =>{
-
-    const inputComment = document.querySelector('.inputComment').value;
-    const starsSelected = document.querySelector('input[name="rate"]:checked');
-
-    if (!inputComment.trim() && !starsSelected) {
-        alert("Please rate us and provide your comments.");
-        return false;
-    }
-
-    if (!starsSelected) {
-        alert("Please rate us.");
-        return false;
-    }
-
-    if (!inputComment.trim()) {
-        alert("Please provide your comments.");
-        return false;
-    }
-
-    else{
-        SendFeedback_Content.style.display = "none";
-        SendFeedback_header.style.display = "none";
-        SubmitConfirmation.style.display = "block";
-        return false;
-    }
-
-}
+openButton.addEventListener('click', () => {
+    modal.showModal();
+});
+closeButton.addEventListener('click', () => {
+    modal.close();
+});
