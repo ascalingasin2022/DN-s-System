@@ -405,77 +405,61 @@
 /* ===================End of Footer=================== */
 
 /* ===================Send Feedback Overlay=================== */
-.SendFeedback_Overlay{
+.SendFeedback_wrapper {
     position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.8);
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity:0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
-}
-.SendFeedback_Overlay:target{
-    visibility: visible;
-    opacity: 1;
-}
-.SendFeedback_Overlay .SendFeedback_wrapper{
-    padding: 20px 25px;
-    background-color: white;
-    box-shadow: 0px 0px 20px black;
     color: #3F3F3F;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
     border-radius: 20px;
-    width: auto;
-    height: auto;
-    position:relative;
-    transition: all 5s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
+    padding: 20px;
+    z-index: 9999; /* Ensure it appears on top of other elements */
+    border: 0;
+    box-shadow: 0px 0px 20px black;
 }
-.SendFeedback_Overlay .SendFeedback_wrapper .SendFeedback_header{
+.SendFeedback_wrapper::backdrop{
+    background: rgba(0, 0, 0, 0.8);
+}
+.SendFeedback_header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-.SendFeedback_Overlay .SendFeedback_wrapper .SendFeedback_header .SendFeedback_Title{
+.SendFeedback_Title{
     font-size: 24px;
     font-weight: bold;
 }
-.SendFeedback_Overlay .SendFeedback_wrapper .SendFeedback_header .close{
-    text-decoration: none;
+.close{
     font-size: 40px;
     font-weight: bold;
     color: #3F3F3F;
+    background: none;
+    border: none;
 }
-.SendFeedback_Overlay .SendFeedback_wrapper .SendFeedback_Content{
+.SendFeedback_Content{
     display: flex;
     flex-direction: column;
     gap: 5px;
     font-size: 12px;
 }
-.SendFeedback_Overlay .SendFeedback_wrapper .SendFeedback_Content .label{
+.label{
     font-weight: bold;
     font-style: italic;
     margin-top: 10px;
 }
-.SendFeedback_Overlay .SendFeedback_wrapper .SendFeedback_Content .inputName{
+.inputName{
     padding: 6px;
     width: 500px;
 }
-.SendFeedback_Overlay .SendFeedback_wrapper .SendFeedback_Content .inputComment{
+.inputComment{
     padding: 6px;
     height: 160px;
     width: 500px;
     resize: none;
 }
-.SendFeedback_Overlay .SendFeedback_wrapper .SendFeedback_Content .SubmitButton{
+.SubmitButton{
     width: 150px;
     font-size: 15px;
     font-weight: bold;
@@ -491,57 +475,46 @@
     margin-right: auto;
     display: block;
 }
-.SendFeedback_Overlay .SendFeedback_wrapper .SendFeedback_Content .SubmitButton:hover{
+.SubmitButton:hover{
     color: #FCC201;
     background-color: #7A591B;
     transition: 0.3s;
 }
-.SendFeedback_Overlay .SendFeedback_wrapper .SendFeedback_Content .starContainer{
+.ratingTitle{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.starContainer{
     display:flex;
     justify-content: center;
     flex-direction: column;
     place-items: center;
     text-align: center;
 }
-.SendFeedback_Overlay .SendFeedback_wrapper .SendFeedback_Content .starContainer .star-widget input{
-    display: none;
+.star-widget input{
+    opacity: 0;
 }
-.SendFeedback_Overlay .SendFeedback_wrapper .SendFeedback_Content .starContainer .star-widget label{
+.star-widget {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.star-widget label{
     font-size: 40px;
     color: #444;
-    padding: 10px;   
     float: right;
     transition: all 0.2s ease;
+    padding-left: 10px;
 }
-.SendFeedback_Overlay .SendFeedback_wrapper .SendFeedback_Content .starContainer .star-widget input:not(:checked) ~ label:hover,
-.SendFeedback_Overlay .SendFeedback_wrapper .SendFeedback_Content .starContainer .star-widget input:not(:checked) ~ label:hover ~label{
+.star-widget input:not(:checked) ~ label:hover,
+.star-widget input:not(:checked) ~ label:hover ~label{
     color: #FCC201;
 }
-.SendFeedback_Overlay .SendFeedback_wrapper .SendFeedback_Content .starContainer .star-widget input:checked ~ label{
+.star-widget input:checked ~ label{
     color: #FCC201;
 }
-.SendFeedback_Overlay .SendFeedback_wrapper .SendFeedback_Content .starContainer .star-widget input#-5:checked ~ label{
+.star-widget input#-5:checked ~ label{
     color: #ffd000;
     text-shadow: 0 0 20px #952;
-}
-.SendFeedback_Overlay .SendFeedback_wrapper .SendFeedback_Content .ratingTitle{
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-}
-/*Send Feedback Overlay Submit Confirmation*/
-.SendFeedback_Overlay .SendFeedback_wrapper .SubmitConfirmation p{
-    font-size: 24px; 
-    font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 10px; 
-    text-align: center;
-}
-.SendFeedback_Overlay .SendFeedback_wrapper .SubmitConfirmation .close{
-    display: flex;
-    justify-content: flex-end;
-}
-.SendFeedback_Overlay .SendFeedback_wrapper .SubmitConfirmation{
-    display: none;
 }
 /* ===================End of Send Feedback Overlay=================== */
